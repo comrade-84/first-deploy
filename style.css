@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+body{
+    display: grid;
+    place-items: center;
+    background-color: #b4b4b4;
+    height: 100vh;
+}
+.box{
+    width: 20%;
+    
+    background-color: #534f4f;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+.box h2{
+    text-align: center;
+    color: #ff5e02;
+}
+.emoji-box{
+    /* border: 2px solid gold; */
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 40px;
+    height: 60px;
+    overflow: hidden;
+
+}
+.stars{
+    text-align: center;
+    /* border: 2px solid red; */
+    margin-top: 10px;
+    font-size: 25px;
+    color: #fff;
+}
+hr{
+    border: none;
+    height: 1px;
+    background-color: #b4b4b4;
+    margin-top: 30px;
+}
+.rate-texts{
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    color: #b4b4b4;
+    margin-bottom: 20px;
+    margin-top: 2px;
+    box-shadow: -5px -5px -7px #534f4f;
+}
+#one:hover ~ .stars .one {
+    color: gold;
+}
+#two:hover ~ .stars .two , #two:hover ~ .stars .one{
+    color: gold;
+}
+#three:hover ~ .stars .three, #three:hover ~ .stars .one, #three:hover ~ .stars .two {
+    color: gold;
+}
+#four:hover ~ .stars .four,#four:hover ~ .stars .two,#four:hover ~ .stars .three,#four:hover ~ .stars .one{
+    color: gold;
+}
+#five:hover ~ .stars .one, #five:hover ~ .stars .two, #five:hover ~ .stars .three, #five:hover ~ .stars .four, #five:hover ~ .stars .five{
+    color: gold;
+}
+#one:checked ~ .stars .one, #two:checked ~ .stars .two , #two:checked ~ .stars .one,#three:checked ~ .stars .three, #three:checked ~ .stars .one, #three:checked ~ .stars .two , #four:checked ~ .stars .four,#four:checked ~ .stars .two,#four:checked ~ .stars .three,#four:checked ~ .stars .one, #five:checked ~ .stars .one, #five:checked ~ .stars .two, #five:checked ~ .stars .three, #five:checked ~ .stars .four, #five:checked ~ .stars .five{
+    color: gold;
+}
+.rate-texts .text::before{
+    content: "i hate it";
+}
+.rate-texts .num::before{
+    content: "1 of 5";
+}
+
+#one:checked ~  .rate-texts .text::before{
+    content: "i hate it";
+}
+#one:checked ~  .rate-texts .num::before{
+    content: "1 of 5";
+}
+#two:checked ~  .rate-texts .text::before{
+    content: "i dislike it";
+}
+#two:checked ~  .rate-texts .num::before{
+    content: "2 of 5";
+}
+#three:checked ~  .rate-texts .text::before{
+    content: "i need it";
+}
+#three:checked ~  .rate-texts .num::before{
+    content: "3 of 5";
+}
+#four:checked ~  .rate-texts .text::before{
+    content: "i like it";
+}
+#four:checked ~  .rate-texts .num::before{
+    content: "4 of 5";
+}
+#five:checked ~  .rate-texts .text::before{
+    content: "i love it";
+}
+#five:checked ~  .rate-texts .num::before{
+    content: "5 of 5";
+}
+input[type="radio"]{
+    display: none;
+}
+
+
+
+.slider{
+    transition: .3s margin-top;
+}
+
+#one:checked ~ .emoji-box .slider{
+    margin-top: 0;
+}
+#two:checked ~ .emoji-box .slider{
+    margin-top: -60px;
+}
+#three:checked ~ .emoji-box .slider{
+    margin-top: -120px;
+}
+#four:checked ~ .emoji-box .slider{
+    margin-top: -180px;
+}
+#five:checked ~ .emoji-box .slider{
+    margin-top: -240px;
+}
+
+
+
+
+
+
